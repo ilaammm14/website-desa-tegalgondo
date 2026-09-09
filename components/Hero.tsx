@@ -36,12 +36,12 @@ export default function Hero() {
   return (
     <section
       id="beranda"
-      className="relative min-h-screen flex flex-col justify-end overflow-hidden"
+      className="relative w-full max-w-full min-h-[100svh] min-h-screen flex flex-col justify-end overflow-hidden"
       aria-label="Hero - Selamat Datang di Desa Tegalgondo"
     >
       {/* Background Image */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 w-full h-full"
         aria-hidden="true"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -61,18 +61,18 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 section-container pb-24 sm:pb-28 lg:pb-32 pt-32">
+      <div className="relative z-10 section-container w-full px-6 sm:px-8 pb-16 sm:pb-28 lg:pb-32 pt-28 sm:pt-32">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="show"
-          className="max-w-3xl"
+          className="max-w-3xl w-full"
         >
           {/* Small label */}
           <motion.div variants={itemVariants}>
-            <span className="inline-flex items-center gap-2 mb-6">
-              <span className="h-px w-8 bg-gold" />
-              <span className="section-label text-white/80 tracking-[0.25em]">
+            <span className="inline-flex items-center gap-2 mb-4 sm:mb-6">
+              <span className="h-px w-6 sm:w-8 bg-gold" />
+              <span className="section-label text-white/80 text-[10px] sm:text-xs tracking-[0.2em] sm:tracking-[0.25em]">
                 SELAMAT DATANG DI DESA TEGALGONDO
               </span>
             </span>
@@ -81,18 +81,17 @@ export default function Hero() {
           {/* Main heading */}
           <motion.h1
             variants={itemVariants}
-            className="font-playfair text-4xl sm:text-5xl lg:text-6xl xl:text-display-xl font-bold text-white leading-tight mb-6"
+            className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.15] mb-5 sm:mb-6"
           >
             Mengenal Desa,{" "}
-            <span className="text-gold italic">Menggali Potensi,</span>{" "}
-            <br className="hidden sm:block" />
-            Membangun Bersama.
+            <span className="text-gold italic block sm:inline">Menggali Potensi,</span>{" "}
+            <span className="block">Membangun Bersama.</span>
           </motion.h1>
 
           {/* Subheading */}
           <motion.p
             variants={itemVariants}
-            className="text-white/75 text-base sm:text-lg font-inter leading-relaxed mb-10 max-w-xl"
+            className="text-white/80 text-sm sm:text-base md:text-lg font-inter leading-relaxed mb-8 sm:mb-10 max-w-xl"
           >
             Desa Tegalgondo, Kecamatan Karangploso, Kabupaten Malang, Jawa
             Timur. Bersama membangun desa yang lebih baik, maju, dan
@@ -102,11 +101,11 @@ export default function Hero() {
           {/* CTA Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto max-w-xs sm:max-w-none"
           >
             <button
               onClick={() => scrollToSection("potensi")}
-              className="btn-primary bg-natural hover:bg-leaf border-0 text-base px-8 py-4 rounded-xl"
+              className="btn-primary bg-natural hover:bg-leaf border-0 text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl w-full sm:w-auto justify-center"
               aria-label="Jelajahi Desa Tegalgondo"
             >
               Jelajahi Desa
@@ -114,7 +113,7 @@ export default function Hero() {
             </button>
             <button
               onClick={() => scrollToSection("profil")}
-              className="btn-ghost text-base px-8 py-4 rounded-xl"
+              className="btn-ghost text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 rounded-xl w-full sm:w-auto justify-center"
               aria-label="Tentang Desa Tegalgondo"
             >
               Tentang Desa

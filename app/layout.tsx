@@ -1,6 +1,15 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+
+// ============================================================
+// VIEWPORT
+// ============================================================
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+};
 
 // ============================================================
 // FONTS
@@ -50,13 +59,11 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "id_ID",
-    // TODO: Ganti dengan URL resmi website setelah deploy ke Vercel
     url: "https://tegalgondo.desa.id",
     siteName: "Desa Tegalgondo",
     title: "Desa Tegalgondo — Kecamatan Karangploso, Kabupaten Malang",
     description:
       "Website profil Desa Tegalgondo, Kecamatan Karangploso, Kabupaten Malang, Jawa Timur.",
-    // TODO: Tambahkan og-image di /public/og-image.jpg (1200x630px)
     images: [
       {
         url: "/og-image.jpg",
@@ -91,20 +98,13 @@ export const metadata: Metadata = {
 
   // Icons
   icons: {
-    // TODO: Tambahkan favicon di /public/favicon.ico
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    // TODO: Tambahkan apple-touch-icon di /public/apple-touch-icon.png
     apple: "/apple-touch-icon.png",
   },
 
-  // Verification
-  // TODO: Tambahkan Google Search Console verification jika diperlukan
-  // verification: { google: "YOUR_GOOGLE_VERIFICATION_CODE" },
-
   // Alternates
   alternates: {
-    // TODO: Ganti dengan URL resmi website
     canonical: "https://tegalgondo.desa.id",
   },
 };
@@ -120,9 +120,9 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${playfair.variable} ${inter.variable} scroll-smooth`}
+      className={`${playfair.variable} ${inter.variable} scroll-smooth w-full overflow-x-hidden`}
     >
-      <body className="font-inter antialiased">
+      <body className="font-inter antialiased w-full max-w-full overflow-x-hidden min-h-screen bg-cream text-charcoal">
         {children}
       </body>
     </html>

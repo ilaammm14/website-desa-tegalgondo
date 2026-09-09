@@ -52,7 +52,7 @@ export default function Gallery() {
     <section
       id="galeri"
       ref={ref}
-      className="section-padding bg-white"
+      className="section-padding bg-white w-full max-w-full overflow-hidden"
       aria-labelledby="gallery-heading"
     >
       <div className="section-container">

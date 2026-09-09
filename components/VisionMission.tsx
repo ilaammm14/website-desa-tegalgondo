@@ -13,7 +13,7 @@ export default function VisionMission() {
     <section
       id="visi-misi"
       ref={ref}
-      className="section-padding bg-beige-50"
+      className="section-padding bg-beige-50 w-full max-w-full overflow-hidden"
       aria-labelledby="visi-misi-heading"
     >
       <div className="section-container">

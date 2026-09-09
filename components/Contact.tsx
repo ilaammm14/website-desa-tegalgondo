@@ -101,7 +101,7 @@ export default function Contact() {
     <section
       id="kontak"
       ref={ref}
-      className="section-padding bg-cream"
+      className="section-padding bg-cream w-full max-w-full overflow-hidden"
       aria-labelledby="contact-heading"
     >
       <div className="section-container">

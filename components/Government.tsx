@@ -74,7 +74,7 @@ export default function Government() {
     <section
       id="pemerintahan"
       ref={ref}
-      className="section-padding bg-cream"
+      className="section-padding bg-cream w-full max-w-full overflow-hidden"
       aria-labelledby="government-heading"
     >
       <div className="section-container">
@@ -112,10 +112,10 @@ export default function Government() {
         </div>
 
         {/* Org Chart */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mx-auto w-full">
           {/* Level 1: Kepala Desa */}
-          <div className="flex justify-center mb-6">
-            <div className="w-64">
+          <div className="flex justify-center mb-6 w-full">
+            <div className="w-64 max-w-full">
               <OfficialCard
                 official={kepalaDesa}
                 size="large"
@@ -131,8 +131,8 @@ export default function Government() {
           </div>
 
           {/* Level 2: Sekretaris Desa */}
-          <div className="flex justify-center mb-6">
-            <div className="w-56">
+          <div className="flex justify-center mb-6 w-full">
+            <div className="w-56 max-w-full">
               <OfficialCard
                 official={sekretarisDesa}
                 size="normal"

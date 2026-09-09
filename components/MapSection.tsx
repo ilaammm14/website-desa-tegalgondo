@@ -13,7 +13,7 @@ export default function MapSection() {
     <section
       id="peta"
       ref={ref}
-      className="section-padding bg-forest overflow-hidden"
+      className="section-padding bg-forest w-full max-w-full overflow-hidden"
       aria-labelledby="map-heading"
     >
       <div className="section-container">

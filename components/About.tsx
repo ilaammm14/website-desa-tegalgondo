@@ -20,13 +20,13 @@ export default function About() {
     <section
       id="profil"
       ref={ref}
-      className="section-padding bg-cream"
+      className="section-padding bg-cream w-full max-w-full overflow-hidden"
       aria-labelledby="about-heading"
     >
       <div className="section-container">
-        <div className="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-24 items-center">
           {/* Left — Text */}
-          <div>
+          <div className="w-full max-w-full">
             {/* Label */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -58,7 +58,7 @@ export default function About() {
                   initial={{ opacity: 0, y: 15 }}
                   animate={isInView ? { opacity: 1, y: 0 } : {}}
                   transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-                  className="prose-village text-base leading-7"
+                  className="prose-village text-sm sm:text-base leading-relaxed"
                 >
                   {paragraph}
                 </motion.p>
@@ -70,7 +70,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="grid grid-cols-3 gap-4 mb-10"
+              className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-10"
             >
               {accentStats.map(({ icon: Icon, value, label }) => (
                 <div
@@ -78,7 +78,7 @@ export default function About() {
                   className="flex flex-col items-center text-center p-4 rounded-xl bg-beige-100 border border-beige-200"
                 >
                   <Icon size={20} className="text-natural mb-2" />
-                  <span className="font-playfair text-xl font-bold text-forest">
+                  <span className="font-playfair text-lg sm:text-xl font-bold text-forest">
                     {value}
                   </span>
                   <span className="text-charcoal/50 text-xs font-inter mt-0.5">
@@ -116,10 +116,10 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="relative w-full max-w-full"
           >
             {/* Main image */}
-            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-strong">
+            <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-strong w-full">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/village/about-main.jpg"
@@ -135,10 +135,10 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="absolute -bottom-6 -left-6 bg-forest rounded-2xl p-6 shadow-strong max-w-[200px]"
+              className="absolute bottom-4 left-4 sm:-bottom-6 sm:-left-6 bg-forest rounded-2xl p-4 sm:p-6 shadow-strong max-w-[180px] sm:max-w-[200px]"
               aria-hidden="true"
             >
-              <div className="text-gold text-3xl font-playfair font-bold mb-1">
+              <div className="text-gold text-2xl sm:text-3xl font-playfair font-bold mb-1">
                 5
               </div>
               <div className="text-white/80 text-xs font-inter leading-tight">
@@ -151,7 +151,7 @@ export default function About() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="absolute -top-4 -right-4 w-28 h-28 rounded-2xl overflow-hidden border-4 border-cream shadow-medium"
+              className="absolute top-2 right-2 sm:-top-4 sm:-right-4 w-20 h-20 sm:w-28 sm:h-28 rounded-2xl overflow-hidden border-2 sm:border-4 border-cream shadow-medium"
               aria-hidden="true"
             >
               {/* Small accent image placeholder */}

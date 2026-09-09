@@ -26,7 +26,7 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-forest text-white"
+      className="bg-forest text-white w-full max-w-full overflow-hidden"
       role="contentinfo"
       aria-label="Footer Desa Tegalgondo"
     >

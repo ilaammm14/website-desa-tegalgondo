@@ -16,7 +16,7 @@ import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <main>
+    <main className="w-full max-w-full overflow-x-hidden">
       {/* Sticky Navbar */}
       <Navbar />
 

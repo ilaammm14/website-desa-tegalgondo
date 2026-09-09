@@ -24,7 +24,7 @@ export default function Dusun() {
     <section
       id="dusun"
       ref={ref}
-      className="section-padding bg-white overflow-hidden"
+      className="section-padding bg-white w-full max-w-full overflow-hidden"
       aria-labelledby="dusun-heading"
     >
       <div className="section-container">

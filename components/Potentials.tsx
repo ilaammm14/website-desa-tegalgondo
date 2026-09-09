@@ -120,7 +120,7 @@ export default function Potentials() {
     <section
       id="potensi"
       ref={ref}
-      className="section-padding bg-beige-50"
+      className="section-padding bg-beige-50 w-full max-w-full overflow-hidden"
       aria-labelledby="potentials-heading"
     >
       <div className="section-container">

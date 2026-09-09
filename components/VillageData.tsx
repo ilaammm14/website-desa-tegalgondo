@@ -37,7 +37,7 @@ export default function VillageData() {
     <section
       id="data-desa"
       ref={ref}
-      className="section-padding bg-beige-50"
+      className="section-padding bg-beige-50 w-full max-w-full overflow-hidden"
       aria-labelledby="data-heading"
     >
       <div className="section-container">

@@ -13,7 +13,7 @@ export default function History() {
     <section
       id="sejarah"
       ref={ref}
-      className="section-padding bg-forest overflow-hidden"
+      className="section-padding bg-forest w-full max-w-full overflow-hidden"
       aria-labelledby="history-heading"
     >
       <div className="section-container">
