@@ -61,7 +61,7 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               {hasInstagram && (
                 <a
-                  href={`https://instagram.com/${contact.instagram}`}
+                  href={`https://www.instagram.com/${contact.instagram}/`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
@@ -72,7 +72,7 @@ export default function Footer() {
               )}
               {hasFacebook && (
                 <a
-                  href={`https://facebook.com/${contact.facebook}`}
+                  href={`https://www.facebook.com/${contact.facebook}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-9 h-9 rounded-lg bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors duration-300"
@@ -91,13 +91,6 @@ export default function Footer() {
                 <MapPin size={16} />
               </a>
             </div>
-
-            {/* Placeholder note for social */}
-            {!hasInstagram && !hasFacebook && (
-              <p className="text-white/25 text-xs font-inter italic mt-3">
-                * Tambahkan akun media sosial di data/village.ts → contact
-              </p>
-            )}
           </div>
 
           {/* Navigation */}
@@ -133,8 +126,8 @@ export default function Footer() {
                 </span>
                 <span
                   className={`text-sm font-inter ${
-                    contact.phone.startsWith("[")
-                      ? "text-white/25 italic"
+                    contact.phone.startsWith("[") || contact.phone === "Data belum tersedia"
+                      ? "text-white/40 italic"
                       : "text-white/70"
                   }`}
                 >
@@ -145,15 +138,12 @@ export default function Footer() {
                 <span className="block text-white/40 text-[10px] font-inter mb-0.5">
                   Email
                 </span>
-                <span
-                  className={`text-sm font-inter break-all ${
-                    contact.email.startsWith("[")
-                      ? "text-white/25 italic"
-                      : "text-white/70"
-                  }`}
+                <a
+                  href={`mailto:${contact.email}`}
+                  className="text-sm font-inter break-all text-white/70 hover:text-white transition-colors"
                 >
                   {contact.email}
-                </span>
+                </a>
               </div>
               <div>
                 <span className="block text-white/40 text-[10px] font-inter mb-0.5">

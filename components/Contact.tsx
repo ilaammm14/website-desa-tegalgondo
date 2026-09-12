@@ -199,7 +199,7 @@ export default function Contact() {
               href={
                 isPending(contact.instagram)
                   ? undefined
-                  : `https://instagram.com/${contact.instagram}`
+                  : `https://www.instagram.com/${contact.instagram}/`
               }
               delay={0.3}
               isInView={isInView}
@@ -212,7 +212,7 @@ export default function Contact() {
               href={
                 isPending(contact.facebook)
                   ? undefined
-                  : `https://facebook.com/${contact.facebook}`
+                  : `https://www.facebook.com/${contact.facebook}`
               }
               delay={0.35}
               isInView={isInView}

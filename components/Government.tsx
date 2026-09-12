@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { HelpCircle } from "lucide-react";
+import { HelpCircle, User } from "lucide-react";
 import { officials, governmentPendingMessage } from "@/data/government";
 import type { Official } from "@/data/government";
 
@@ -23,7 +23,6 @@ function OfficialCard({
     small: "px-3 py-3",
   };
 
-  // All officials are pending — no fake initials
   const isPending = official.status === "pending";
 
   return (
@@ -37,14 +36,23 @@ function OfficialCard({
     >
       {/* Avatar */}
       <div
-        className={`mx-auto mb-3 rounded-full flex items-center justify-center flex-shrink-0 bg-beige-100 border-2 border-dashed border-beige-300 ${
-          size === "large" ? "w-16 h-16" : "w-12 h-12"
-        }`}
+        className={`mx-auto mb-3 rounded-full flex items-center justify-center flex-shrink-0 ${
+          isPending
+            ? "bg-beige-100 border-2 border-dashed border-beige-300"
+            : "bg-forest/10 border border-forest/20"
+        } ${size === "large" ? "w-16 h-16" : "w-12 h-12"}`}
       >
-        <HelpCircle
-          size={size === "large" ? 24 : 18}
-          className="text-charcoal/25"
-        />
+        {isPending ? (
+          <HelpCircle
+            size={size === "large" ? 24 : 18}
+            className="text-charcoal/25"
+          />
+        ) : (
+          <User
+            size={size === "large" ? 26 : 20}
+            className="text-forest"
+          />
+        )}
       </div>
 
       {/* Position */}
@@ -52,7 +60,13 @@ function OfficialCard({
         <span className="block text-[10px] font-inter font-semibold tracking-widest uppercase text-natural/60 mb-1">
           {official.position}
         </span>
-        <span className="block font-inter text-charcoal/30 italic text-xs">
+        <span
+          className={`block font-inter ${
+            isPending
+              ? "text-charcoal/30 italic text-xs"
+              : "text-forest font-semibold text-sm"
+          }`}
+        >
           {official.name}
         </span>
       </div>

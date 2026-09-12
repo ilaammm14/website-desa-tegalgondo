@@ -36,7 +36,7 @@ export default function Dusun() {
             className="flex items-center gap-3 mb-6"
           >
             <div className="divider-gold" />
-            <span className="section-label">5 Dusun</span>
+            <span className="section-label">Wilayah & RT</span>
           </motion.div>
 
           <motion.h2
@@ -46,8 +46,8 @@ export default function Dusun() {
             transition={{ delay: 0.1 }}
             className="section-heading"
           >
-            Lima Dusun,{" "}
-            <span className="text-natural italic">Satu Tegalgondo</span>
+            Pembagian Wilayah,{" "}
+            <span className="text-natural italic">RT & Penanggung Jawab</span>
           </motion.h2>
         </div>
 
@@ -189,12 +189,21 @@ export default function Dusun() {
               </div>
 
               <div className="p-5">
-                <p className="text-sm leading-6 font-inter text-charcoal/70">
+                <p className="text-sm leading-6 font-inter text-charcoal/70 mb-4">
                   {dusun.description}
                 </p>
-                <p className="mt-3 text-charcoal/30 text-xs font-inter italic">
-                  Data detail dusun belum tersedia — konfirmasi ke Pemerintah Desa.
-                </p>
+                <div className="pt-3 border-t border-beige-200 grid grid-cols-2 gap-3">
+                  {dusun.details.map((detail) => (
+                    <div key={detail.label}>
+                      <span className="block text-[10px] font-inter font-semibold tracking-widest uppercase text-charcoal/40 mb-0.5">
+                        {detail.label}
+                      </span>
+                      <span className="block font-inter text-xs text-forest font-semibold">
+                        {detail.value}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </motion.article>
           ))}

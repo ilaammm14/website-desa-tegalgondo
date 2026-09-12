@@ -18,122 +18,230 @@
 
 export type GalleryCategory =
   | "semua"
-  | "desa"
-  | "masyarakat"
   | "pertanian"
-  | "kegiatan"
-  | "budaya"
-  | "lingkungan";
+  | "industri umkm"
+  | "sdm"
+  | "lingkungan & bank sampah"
+  | "sosial kemasyarakatan"
+  | "balai desa";
 
 export interface GalleryItem {
   id: string;
   title: string;
-  /** Path ke foto asli — isi setelah foto tersedia */
   image: string;
   category: Exclude<GalleryCategory, "semua">;
-  /** true = foto belum tersedia, tampilkan placeholder gradient */
   isPlaceholder: boolean;
 }
 
 export const galleryCategories: { value: GalleryCategory; label: string }[] = [
   { value: "semua", label: "Semua" },
-  { value: "desa", label: "Desa" },
-  { value: "masyarakat", label: "Masyarakat" },
   { value: "pertanian", label: "Pertanian" },
-  { value: "kegiatan", label: "Kegiatan" },
-  { value: "budaya", label: "Budaya" },
-  { value: "lingkungan", label: "Lingkungan" },
+  { value: "industri umkm", label: "Industri UMKM" },
+  { value: "sdm", label: "SDM" },
+  { value: "lingkungan & bank sampah", label: "Lingkungan & Bank Sampah" },
+  { value: "sosial kemasyarakatan", label: "Sosial Kemasyarakatan" },
+  { value: "balai desa", label: "Balai Desa" },
 ];
 
-// ============================================================
-// GALERI DESA TEGALGONDO
-// Semua item di bawah adalah PLACEHOLDER — foto asli belum tersedia.
-// Tidak ada gambar AI yang digunakan sebagai dokumentasi nyata.
-// Developer: Ganti dengan foto dokumentasi asli Desa Tegalgondo.
-// ============================================================
 export const galleryItems: GalleryItem[] = [
+  // 1. Pertanian
   {
-    id: "gallery-01",
-    title: "Dokumentasi Desa Tegalgondo",
-    image: "/images/gallery/desa-01.jpg",
-    category: "desa",
-    isPlaceholder: false,
-  },
-  {
-    id: "gallery-02",
-    title: "Dokumentasi Desa Tegalgondo",
-    image: "/images/gallery/desa-02.jpg",
-    category: "desa",
-    isPlaceholder: false,
-  },
-  {
-    id: "gallery-03",
-    title: "Dokumentasi Desa Tegalgondo",
-    image: "/images/gallery/desa-03.jpg",
-    category: "desa",
-    isPlaceholder: false,
-  },
-  {
-    id: "gallery-04",
-    title: "Kegiatan Masyarakat",
-    image: "/images/gallery/masyarakat-01.jpg",
-    category: "masyarakat",
-    isPlaceholder: false,
-  },
-  {
-    id: "gallery-05",
-    title: "Kegiatan Masyarakat",
-    image: "/images/gallery/masyarakat-02.jpg",
-    category: "masyarakat",
-    isPlaceholder: false,
-  },
-  {
-    id: "gallery-06",
-    title: "Kegiatan Pertanian",
-    image: "/images/gallery/pertanian-01.jpg",
+    id: "pertanian-01",
+    title: "Hidroponik Desa Tegalgondo",
+    image: "/images/1.%20pertanian/hidroponik.jpeg",
     category: "pertanian",
     isPlaceholder: false,
   },
+
+  // 2. Industri UMKM
   {
-    id: "gallery-07",
-    title: "Kegiatan Pertanian",
-    image: "/images/gallery/pertanian-02.jpg",
-    category: "pertanian",
+    id: "umkm-01",
+    title: "Omahsehat Jamu",
+    image: "/images/2.%20industri%20umkm/omahsehat%20jamu.jpeg",
+    category: "industri umkm",
+    isPlaceholder: false,
+  },
+
+  // 3. SDM
+  {
+    id: "sdm-01",
+    title: "Calistung TPQ Sang Surya",
+    image: "/images/3.%20sdm/calistung%20tpq%20sang%20surya.jpeg",
+    category: "sdm",
     isPlaceholder: false,
   },
   {
-    id: "gallery-08",
-    title: "Kegiatan Desa",
-    image: "/images/gallery/kegiatan-01.jpg",
-    category: "kegiatan",
+    id: "sdm-02",
+    title: "Digitalisasi UMKM Bersama Ibu PKK RW 09",
+    image: "/images/3.%20sdm/digitalisasi%20umkm%20bersama%20ibu%20pkk%20rw%2009.jpeg",
+    category: "sdm",
     isPlaceholder: false,
   },
   {
-    id: "gallery-09",
-    title: "Kegiatan Desa",
-    image: "/images/gallery/kegiatan-01.jpg",
-    category: "kegiatan",
+    id: "sdm-03",
+    title: "Edukasi DAGUSIBU Bersama Ibu PKK RW 09",
+    image: "/images/3.%20sdm/edukasi%20dagusibu%20bersama%20ibu%20pkk%20rw%2009.jpeg",
+    category: "sdm",
     isPlaceholder: false,
   },
   {
-    id: "gallery-10",
-    title: "Budaya Desa",
-    image: "/images/gallery/budaya-01.jpg",
-    category: "budaya",
+    id: "sdm-04",
+    title: "Kajian Rutin SDM",
+    image: "/images/3.%20sdm/kajian%20rutin.jpeg",
+    category: "sdm",
     isPlaceholder: false,
   },
   {
-    id: "gallery-11",
-    title: "Lingkungan Desa",
-    image: "/images/gallery/lingkungan-01.jpg",
-    category: "lingkungan",
+    id: "sdm-05",
+    title: "Memperingati Hari Posyandu Nasional",
+    image: "/images/3.%20sdm/memperingati%20hari%20posyandu%20nasional%2029%20april%202026.jpeg",
+    category: "sdm",
     isPlaceholder: false,
   },
   {
-    id: "gallery-12",
-    title: "Lingkungan Desa",
-    image: "/images/gallery/lingkungan-02.jpg",
-    category: "lingkungan",
+    id: "sdm-06",
+    title: "Menghias Taman Baca dengan Bunga",
+    image: "/images/3.%20sdm/menghias%20taman%20baca%20dengan%20bunga.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+  {
+    id: "sdm-07",
+    title: "Merayakan HUT RI Bersama Ibu Dawis RT 40",
+    image: "/images/3.%20sdm/merayakan%20hut%20ri%20ke%2081%20bersama%20ibu%20dawis%201%20rt%2040%20perum%20ikip%20tegalgondo%20asri.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+  {
+    id: "sdm-08",
+    title: "Musyawarah Desa",
+    image: "/images/3.%20sdm/musyawarah%20desa.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+  {
+    id: "sdm-09",
+    title: "Pelantikan dan Sumpah Jabatan",
+    image: "/images/3.%20sdm/pelantikan%20dan%20sumpah%20jabatan.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+  {
+    id: "sdm-10",
+    title: "Posyandu Dawuhan",
+    image: "/images/3.%20sdm/posyandu%20dawuhan.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+  {
+    id: "sdm-11",
+    title: "Posyandu Gondang",
+    image: "/images/3.%20sdm/posyandu%20gondang.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+  {
+    id: "sdm-12",
+    title: "Posyandu Perum IKIP Tegalgondo Asri",
+    image: "/images/3.%20sdm/posyandu%20perum%20ikip%20tegalgondo%20asri.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+  {
+    id: "sdm-13",
+    title: "Senam Sehat Warga",
+    image: "/images/3.%20sdm/senam.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+  {
+    id: "sdm-14",
+    title: "Sosialisasi Penanganan Cidera Olahraga",
+    image: "/images/3.%20sdm/sosialisasi%20penanganan%20cidera%20pada%20pemain%20sepakbola.jpeg",
+    category: "sdm",
+    isPlaceholder: false,
+  },
+
+  // 4. Lingkungan & Bank Sampah
+  {
+    id: "lingkungan-01",
+    title: "Bank Sampah Tegalgondo",
+    image: "/images/4.%20lingkungan%20%26%20bank%20sampah/bank%20sampah%20tegalgondo.jpeg",
+    category: "lingkungan & bank sampah",
+    isPlaceholder: false,
+  },
+  {
+    id: "lingkungan-02",
+    title: "Ecodesa Pilah Sampah dengan Bijak",
+    image: "/images/4.%20lingkungan%20%26%20bank%20sampah/ecodesa%20pilah%20sampah%20dengan%20bijak.jpeg",
+    category: "lingkungan & bank sampah",
+    isPlaceholder: false,
+  },
+  {
+    id: "lingkungan-03",
+    title: "Operasi Semut Kebersihan",
+    image: "/images/4.%20lingkungan%20%26%20bank%20sampah/operasi%20semut.jpeg",
+    category: "lingkungan & bank sampah",
+    isPlaceholder: false,
+  },
+  {
+    id: "lingkungan-04",
+    title: "Pembersihan Lingkungan Desa",
+    image: "/images/4.%20lingkungan%20%26%20bank%20sampah/pembersihan%20lingkungan.jpeg",
+    category: "lingkungan & bank sampah",
+    isPlaceholder: false,
+  },
+
+  // 5. Sosial Kemasyarakatan
+  {
+    id: "sosial-01",
+    title: "Bantuan Penyaluran Pangan",
+    image: "/images/5.%20sosial%20kemasyarakatan/bantuan%20penyaluran%20pangan.jpeg",
+    category: "sosial kemasyarakatan",
+    isPlaceholder: false,
+  },
+  {
+    id: "sosial-02",
+    title: "Kajian Rutin Kemasyarakatan",
+    image: "/images/5.%20sosial%20kemasyarakatan/kajian%20rutin.jpeg",
+    category: "sosial kemasyarakatan",
+    isPlaceholder: false,
+  },
+  {
+    id: "sosial-03",
+    title: "Malam Barikan Perum IKIP Tegalgondo Asri",
+    image: "/images/5.%20sosial%20kemasyarakatan/malam%20barikan%20perum%20ikip%20tegalgondo%20asri.jpeg",
+    category: "sosial kemasyarakatan",
+    isPlaceholder: false,
+  },
+  {
+    id: "sosial-04",
+    title: "Selametan Dusun Ketangi",
+    image: "/images/5.%20sosial%20kemasyarakatan/selametan%20dusun%20ketangi.jpeg",
+    category: "sosial kemasyarakatan",
+    isPlaceholder: false,
+  },
+  {
+    id: "sosial-05",
+    title: "Silaturahmi dan Makan Bersama",
+    image: "/images/5.%20sosial%20kemasyarakatan/silaturahmi%20dan%20makan%20bersama.jpeg",
+    category: "sosial kemasyarakatan",
+    isPlaceholder: false,
+  },
+  {
+    id: "sosial-06",
+    title: "Tarawih Bersama Warga",
+    image: "/images/5.%20sosial%20kemasyarakatan/tarawih%20bersama.jpeg",
+    category: "sosial kemasyarakatan",
+    isPlaceholder: false,
+  },
+
+  // 6. Balai Desa
+  {
+    id: "balai-01",
+    title: "Balai Desa Tegalgondo",
+    image: "/images/balai%20desa/balai%20desa%20tegalgondo.jpeg",
+    category: "balai desa",
     isPlaceholder: false,
   },
 ];

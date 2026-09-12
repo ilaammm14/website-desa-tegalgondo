@@ -90,24 +90,19 @@ export const villageInfo: VillageInfo = {
 
   // ============================================================
   // KONTAK
-  // Sumber: Pemerintah Desa Tegalgondo — data terbaru perlu dikonfirmasi
+  // Sumber: Pemerintah Desa Tegalgondo
   // ============================================================
   contact: {
     // Alamat berdasarkan lokasi desa yang terverifikasi
     address: "Desa Tegalgondo, Kecamatan Karangploso, Kabupaten Malang, Jawa Timur",
-    // TODO: Masukkan nomor telepon resmi Kantor Desa Tegalgondo
     phone: "Data belum tersedia",
-    // TODO: Masukkan email resmi
-    email: "Data belum tersedia",
-    // TODO: Masukkan username Instagram resmi jika sudah ada
-    instagram: "",
-    // TODO: Masukkan username Facebook resmi jika sudah ada
-    facebook: "",
+    email: "tegalgondomaju@gmail.com",
+    instagram: "tegalgondomaju",
+    facebook: "tegalgondoofficial",
     // Link Google Maps pencarian berdasarkan nama desa
     googleMapsUrl:
       "https://maps.google.com/?q=Desa+Tegalgondo+Karangploso+Malang",
     // Embed Google Maps — pencarian berdasarkan nama desa
-    // TODO: Ganti dengan embed URL spesifik kantor desa setelah koordinat resmi diperoleh
     googleMapsEmbed:
       "https://maps.google.com/maps?q=Desa+Tegalgondo+Karangploso+Malang&output=embed",
   },

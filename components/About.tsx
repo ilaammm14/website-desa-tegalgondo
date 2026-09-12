@@ -122,8 +122,8 @@ export default function About() {
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-strong w-full">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/village/about-main.jpg"
-                alt="Suasana Desa Tegalgondo"
+                src="/images/balai%20desa/balai%20desa%20tegalgondo.jpeg"
+                alt="Balai Desa Tegalgondo"
                 className="w-full h-full object-cover object-center"
               />
               {/* Subtle gradient overlay at bottom */}
