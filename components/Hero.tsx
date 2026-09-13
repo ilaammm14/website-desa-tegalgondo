@@ -46,8 +46,8 @@ export default function Hero() {
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/images/hero/hero-bg.jpg"
-          alt="Pemandangan Desa Tegalgondo"
+          src="/images/desa/Kantor Kepala Desa.jpeg"
+          alt="Kantor Kepala Desa Tegalgondo"
           className="w-full h-full object-cover object-center"
         />
         {/* Dark gradient overlay for text readability */}

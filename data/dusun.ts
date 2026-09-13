@@ -43,7 +43,7 @@ export const dusunList: DusunItem[] = [
     name: "Dusun Gondang",
     description:
       "Wilayah Dusun Gondang melingkupi RT 1–8 di Desa Tegalgondo.",
-    image: "/images/dusun/gondang.jpg",
+    image: "/images/dusun/Dusun Gondang.jpeg",
     status: "verified",
     details: [
       {
@@ -68,7 +68,7 @@ export const dusunList: DusunItem[] = [
     name: "Dusun Babatan",
     description:
       "Wilayah Dusun Babatan melingkupi RT 9–11 di Desa Tegalgondo.",
-    image: "/images/dusun/babatan.jpg",
+    image: "/images/dusun/Dusun Babatan.jpeg",
     status: "verified",
     details: [
       {
@@ -93,7 +93,7 @@ export const dusunList: DusunItem[] = [
     name: "Dusun Wunutsari",
     description:
       "Wilayah Dusun Wunutsari melingkupi RT 12–15 di Desa Tegalgondo.",
-    image: "/images/dusun/wunutsari.jpg",
+    image: "/images/dusun/Dusun Wunutsari.jpeg",
     status: "verified",
     details: [
       {
@@ -118,7 +118,7 @@ export const dusunList: DusunItem[] = [
     name: "Dusun Dawuhan",
     description:
       "Wilayah Dusun Dawuhan melingkupi RT 16–24 di Desa Tegalgondo.",
-    image: "/images/dusun/dawuhan.jpg",
+    image: "/images/dusun/Dusun Dawuhan.jpeg",
     status: "verified",
     details: [
       {
@@ -143,7 +143,7 @@ export const dusunList: DusunItem[] = [
     name: "Dusun Ketangi",
     description:
       "Wilayah Dusun Ketangi melingkupi RT 25–39 di Desa Tegalgondo.",
-    image: "/images/dusun/ketangi.jpg",
+    image: "/images/dusun/Dusun Ketangi.jpeg",
     status: "verified",
     details: [
       {
